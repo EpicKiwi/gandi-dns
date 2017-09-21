@@ -67,9 +67,6 @@ function promiseCall(call,params){
 				reject(err)
 				return
 			}
-			console.log(call)
-			console.log(params)
-			console.log(data)
 			resolve(data)
 		})
 	})
@@ -101,6 +98,9 @@ async function refreshRecords(records,ipv4){
 		let registeredRecord = await promiseCall("domain.zone.record.add",[zoneid,newVersionId,newRecord])
 		newRecords.push(registeredRecord)
 	}
+
+	await promiseCall("domain.zone.version.set",[zoneid,newVersionId])
+
 	return newRecords
 }
 

@@ -21,7 +21,7 @@ module.exports = async function refreshRecords(){
 	}
 
 	if(needRefresh.length > 0){
-		console.log(await api.refreshRecords(needRefresh,myipv4))
+		await api.refreshRecords(needRefresh,myipv4)
 	} else {
 		console.log("Everything up to date")
 	}
