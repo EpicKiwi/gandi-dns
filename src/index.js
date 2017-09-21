@@ -1,14 +1,7 @@
-const publicIp = require("public-ip")
-const apiClient = require('node-gandi');
-const config = require("./config")
+const refresh = require("./refresh")
 
-const api = new apiClient(config.apikey)
-
-publicIp.v4().then((myIpv4) => {
-	console.log("Votre IP : "+myIpv4)
-})
-
-api.call("domain.available",config.domain,(err,data)=>{
-	if(err) throw err
-	console.log(data)
+refresh().then((result)=>{
+	console.info(result)
+}).catch((err)=>{
+	console.error(err)
 })
