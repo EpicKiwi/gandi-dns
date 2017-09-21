@@ -1,0 +1,23 @@
+{
+  "name": "gandi-dns",
+  "version": "1.0.0",
+  "description": "Mise a jour automatique de la zone DNS gandi",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpicKiwi/gandi-dns.git"
+  },
+  "author": "E <me@epickiwi.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EpicKiwi/gandi-dns/issues"
+  },
+  "homepage": "https://github.com/EpicKiwi/gandi-dns#readme",
+  "dependencies": {
+    "node-gandi": "^2.0.1",
+    "public-ip": "^2.3.5"
+  }
+}
